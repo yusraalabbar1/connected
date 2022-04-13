@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <TextView
+        android:id="@+id/Tex"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="60dp"
+        android:text="Enter All Number Phone:"/>
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_below="@+id/Tex"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/edit_text_border"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="61dp"
+
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:ems="10"
+        android:hint="@string/enter_phone"
+        android:minHeight="48dp"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:textColor="#AC2626" />
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_below="@+id/editText_main"
+        android:id="@+id/line"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/phone_icon"
+
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+
+            android:layout_alignEnd="@+id/editText"
+            android:layout_alignRight="@+id/editText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="#90009688"
+
+            android:contentDescription="@string/retry"
+
+            android:onClick="callNumber"
+            android:text="@string/retry"
+            app:srcCompat="@android:drawable/stat_sys_phone_call_forward" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="10dp"/>
+        <Button
+            android:id="@+id/button_retry"
+
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+
+            android:layout_alignEnd="@+id/editText"
+            android:layout_alignRight="@+id/editText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="#983D3D"
+            android:backgroundTint="#A84949"
+            android:contentDescription="@string/retry"
+            android:onClick="retryApp"
+            android:text="@string/retry"
+            android:visibility="invisible" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="10dp"/>
+        <Button
+
+            android:id="@+id/button"
+
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+
+            android:text="start_logging" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="10dp"/>
+        <Button
+            android:id="@+id/buttonCopy"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:text="Delete Rigester" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="171dp"
+        android:layout_marginLeft="171dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginRight="182dp"
+        android:layout_marginBottom="117dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/incoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_retry"
+        android:layout_alignParentLeft="true"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:text="@string/phone_call_from"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
